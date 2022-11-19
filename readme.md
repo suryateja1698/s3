@@ -6,10 +6,10 @@
 4. Choose your IAM user name (not the check box).
 5. Open the Security credentials tab, and then choose Create access key.
 6. To see the new access key, choose Show. Your credentials resemble the following:
-
+````
    Access key ID: AKIAIOSFODNN7EXAMPLE
    Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-
+````
 
 Store these keys in `~/.aws/credentials` file in following format:
 ````
