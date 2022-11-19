@@ -11,7 +11,7 @@
    Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 
 
-Store these keys in `~/.aws/credentials` in following format:
+Store these keys in `~/.aws/credentials` file in following format:
 ````
 [default]
 aws_access_key_id = your-access-key
