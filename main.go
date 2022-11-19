@@ -12,11 +12,6 @@ import (
 
 func main() {
 
-	// if you have credentials in ~/.aws/credentials as
-	// [default]
-	// aws_access_key_id = somevalue
-	// aws_secret_access_key = some val
-	// it will get the creds
 	sess := session.Must(session.NewSessionWithOptions(session.Options{
 		SharedConfigState: session.SharedConfigEnable,
 		Config:            aws.Config{Region: aws.String("ap-northeast-1")},
