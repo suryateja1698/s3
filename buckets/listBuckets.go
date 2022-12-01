@@ -10,7 +10,7 @@ import (
 func ListAllBuckets(client *s3.S3) {
 	res, err := client.ListBuckets(nil)
 	if err != nil {
-		log.Fatal("cannot list buckets")
+		log.Fatal("cannot list buckets", err)
 	}
 
 	fmt.Println("Buckets list:", res.Buckets)

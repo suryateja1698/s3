@@ -13,11 +13,11 @@ import (
 )
 
 var (
-	Client *s3.S3
+	Client  *s3.S3
+	Session *session.Session
 )
 
 func main() {
-
 	location, err := buckets.CreateBucket(Client)
 	if err != nil {
 		log.Fatal("err in creating bucket", err)
@@ -25,6 +25,15 @@ func main() {
 	log.Println("location of bucket created is:", location)
 
 	buckets.ListAllBuckets(Client)
+
+	err = buckets.Upload(Session)
+	if err != nil {
+		log.Fatal("upload err:", err)
+	}
+	err = buckets.GetFile(Session)
+	if err != nil {
+		log.Fatal("download file err:", err)
+	}
 }
 
 func init() {
@@ -55,4 +64,5 @@ func init() {
 
 	// create a new client for s3 with the session
 	Client = s3.New(sess)
+	Session = sess
 }
